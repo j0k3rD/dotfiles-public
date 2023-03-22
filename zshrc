@@ -125,8 +125,7 @@ function rmk(){
 }
 
 # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalizesource ~/powerlevel10k/powerlevel10k.zsh-themesource ~/powerlevel10k/powerlevel10k.zsh-theme
+(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
+~/powerlevel10k/powerlevel10k.zsh-themesource ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias cat='batcat'
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
