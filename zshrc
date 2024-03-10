@@ -43,7 +43,6 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-source /home/j0k3r/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
@@ -51,6 +50,8 @@ source /home/j0k3r/powerlevel10k/powerlevel10k.zsh-theme
 # Manual configuration
 
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
 
 # Manual aliases
 alias ll='lsd -lh --group-dirs=first'
@@ -58,8 +59,9 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='bat'
-
+alias cat='batcat'
+alias n='nvim'
+alias g='git'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
@@ -124,3 +126,4 @@ function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
+source ~/powerlevel10k/powerlevel10k.zsh-theme
